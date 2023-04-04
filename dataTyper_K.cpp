@@ -1,18 +1,28 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
- 
+
 int main(){
-    int a,b,c,ma,mi;
+    long long a, b, c, min,max;
     cin>>a>>b>>c;
-    
-    ma= max(a,b);
-    ma = max(ma,c);
-    mi = min(a,b);
-    mi = min(mi,c);
-    
-	
-	cout<<mi<<" "<<ma<<endl;
-	
-	
-    
+
+    max = a;
+    if(b>max){
+        max =b;
+    }
+
+    if(c>max){
+        max =c;
+    }
+
+    min = a;
+    if(b<min)
+    {
+        min = b;
+    }
+    if(c<min){
+        min = c;
+    }
+
+    cout<<min<<" "<<max<<endl;
+
 }
