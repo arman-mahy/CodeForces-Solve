@@ -1,38 +1,41 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main(){
-	int arr[3];
-	
-	for(int i=0; i<3; i++){
-		cin>>arr[i];
-	}
-		
-	int temp =0;
-	int length = sizeof(arr)/sizeof(arr[0]);
-	
-	for(int i=0; i<length; i++){
-		for(int j=i+1; j<length; j++){
-			if(arr[i]>arr[j]){
-				temp = arr[i];
-				arr[i] = arr[j];
-				arr[j] = temp;
-			}
-		}
-	}
-	
-	for(int i=0; i<length; i++){
-		cout<<arr[i];
-		cout<<endl;
-	}
-	
-	cout<<endl;
-	
-	for(int i=0; i<3; ++i){
-		cout<<arr[i];
-		cout<<endl;
-	}
-	
-	
-	
+   double a, b, c,temp,a2,b2,c2;
+   cin>>a>>b>>c;
+   a2=a;
+   b2=b;
+   c2=c;
+
+   if(a>b){
+    temp =a ;
+    a = b;
+    b = temp;
+   }
+
+   if(a>c){
+    temp =a;
+    a = c;
+    c = temp;
+   }
+
+   if(b>c){
+    temp = b;
+    b = c;
+    c = temp;
+   }
+
+   cout<<a<<endl;
+   cout<<b<<endl;
+   cout<<c<<endl;
+
+   cout<<endl;
+
+   cout<<a2<<endl;
+   cout<<b2<<endl;
+   cout<<c2<<endl;
+
+
+
 }
