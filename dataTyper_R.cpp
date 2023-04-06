@@ -1,18 +1,16 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main(){
-	int n;
-	cin>>n;
-	
-	int year,month,days;
-	
-	month = n/30;
-	year = (n/365);
-	month = month-(12*year);
-	days = n-((year*365)+(month*30)); 
-	
-	cout<<year<<" years"<<endl;
-	cout<<month<<" months"<<endl;
-	cout<<days<<" days"<<endl;
+   double x;
+   int year,month,day;
+   cin>>x;
+
+   year = x / 365;
+   month  = (x - (year*365))/30;
+   day = x - ((year*365)+(month*30));
+
+   cout<<year<<" years"<<endl;
+   cout<<month<<" months"<<endl;
+   cout<<day<<" days"<<endl;
 }
